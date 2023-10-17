@@ -1,0 +1,91 @@
+@import "./variables.css";
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap");
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Golos Text";
+  color: var(--mainTextColor);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .Title {
+    font-size: 35px;
+    font-weight: 500;
+  }
+  .points {
+    display: flex;
+    flex-direction: column;
+    .point::before {
+      width: 30px;
+      height: 30px;
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      top: calc(50% - 15px);
+      -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+      -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+      box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+      z-index: 10;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: openColor forwards 0.5s ease-in-out;
+    }
+    .point::after {
+      width: 25px;
+      margin-left: 2.5px;
+      height: 130px;
+      position: absolute;
+      content: "";
+      animation: openColor forwards 0.5s ease-in-out;
+      top: -100px;
+      z-index: 0;
+      background-color: var(--secondBackGroudColor);
+      left: 0;
+    }
+    .donePoint::before {
+      background-image: url(./images/check.svg);
+      background-color: var(--MainAccentTextColor);
+    }
+    .makePoint::before {
+      background-color: var(--SecondAccentTextColor);
+      background-image: url(./images/clock.svg);
+    }
+    .morePoint::before {
+      background-color: var(--secondTextColor);
+      background-image: url(./images/more-horizontal.svg);
+    }
+    .point {
+      position: relative;
+      margin-top: 60px;
+      padding-left: 50px;
+      .title {
+        font-size: 20px;
+        animation: openColor forwards 0.5s ease-in-out;
+      }
+      .desc {
+        margin-top: 5px;
+        animation: openColor forwards 0.5s ease-in-out;
+        max-width: 600px;
+        color: var(--secondTextColor);
+        font-size: 16px;
+      }
+    }
+    .firstPoint {
+      margin-top: 40px;
+    }
+    .firstPoint::after {
+      display: none;
+    }
+  }
+}
+
+@keyframes openColor {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

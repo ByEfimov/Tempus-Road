@@ -1,0 +1,10 @@
+html {
+  --mainTextColor: #f0f0f0;
+  --MainAccentTextColor: #4d8ad0;
+  --SecondAccentTextColor: #e96634;
+  --secondTextColor: #686868;
+  --mainPaddingH: 300px;
+  --mainBackGroudColor: #191919;
+  --secondBackGroudColor: #333;
+  --mainBoxShadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
